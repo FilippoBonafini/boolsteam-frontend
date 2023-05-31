@@ -1,20 +1,17 @@
 <script>
 import AppHeader from "./AppHeader.vue";
-import AppNav from "./AppNav.vue";
-import AppGameForYou from "./AppGameForYou.vue";
+import AppJumbo from "./AppJumbo.vue";
 
 export default {
-    name: "AppMainTop",
-    components: {
-        AppHeader,
-        AppNav,
-        AppGameForYou
-    },
+  name: "AppMainTop",
+  components: {
+    AppHeader,
+    AppJumbo,
+  },
 };
 </script>
 
 <template>
-    <AppHeader />
-    <AppNav />
-    <AppGameForYou />
+  <AppHeader />
+  <AppJumbo />
 </template>

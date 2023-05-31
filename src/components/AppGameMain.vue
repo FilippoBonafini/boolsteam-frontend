@@ -1,18 +1,14 @@
 <script>
 export default {
-  name: "AppNav",
+  name: "AppGameMain",
 };
 </script>
 
 <template>
-  <nav>navbar</nav>
+  <div class="py-5">Game main</div>
 </template>
 
 <style scoped lang="scss">
 @import "../assets/scss/main.scss";
 @import "../assets/scss/_partial/_variables.scss";
-
-nav {
-  background-color: aqua;
-}
 </style>
