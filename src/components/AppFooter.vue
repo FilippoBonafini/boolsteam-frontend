@@ -11,7 +11,7 @@
                 <small>
                     @2023 Valve Corporation.Tutti i diritti riservati. Tutti i marchi appartengono ai rispettivi proprietari
                     negli Stati Uniti e negli altri paesi.
-                    Iva iclusa sul prezzo(ove applicabile).
+                    Iva inclusa sul prezzo(ove applicabile).
 
                     <a href="">Informativa sulla privacy</a>
                     <a href="">informazioni legali</a>
@@ -31,6 +31,7 @@
                 <!--da inserire al posto di i l'icona-->
                 <a href="">i Steam</a>
                 <a href="">i @steam</a>
+                <a href="">Terracotta</a>
             </div>
         </div>
 

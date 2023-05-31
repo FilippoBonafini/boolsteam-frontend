@@ -13,7 +13,7 @@ export default {
 <template>
   <main>
     <div class="container container-main-bot">
-      <h3>I GIOCHI:</h3>
+      <h3 class="py-4">I GIOCHI:</h3>
 
       <div class="contaier container-card-list">
         <div
@@ -22,21 +22,27 @@ export default {
         >
           <!--il contaier img poi va tolto-->
           <div class="info-img d-flex">
+
             <div class="container-img">
               <img :src="store.img_prefix + game.image" alt="" />
+
             </div>
 
             <div class="info">
+
               <h3>{{ game.title }}</h3>
               <div class="d-flex gap-2">
                 <div class="tag" v-for="tag in game.genres">
                   {{ tag.name }}
                 </div>
+
               </div>
 
               <div>
+
                 <small>{{ game.release_date }}</small
                 ><!--aggiungere l'icona delle piattaforme-->
+
               </div>
             </div>
           </div>
@@ -57,7 +63,7 @@ main {
   color: $card-text;
 }
 
-.container-main-bot > h3 {
+.container-main-bot>h3 {
   color: white;
 }
 
@@ -65,6 +71,10 @@ main {
   background-color: $card-bg;
   padding-top: 5px;
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container-card-list:last-child {
+  padding-bottom: 30px;
 }
 
 .container-img {
