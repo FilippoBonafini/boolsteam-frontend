@@ -43,11 +43,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '../assets/scss/main.scss';
+@import '../assets/scss/_partial/_variables.scss';
+
 footer {
     padding: 20px;
-    color: white;
-    background-color: rgb(47, 57, 51);
+    color: $footer-text;
+    background-color: $footer-background;
 }
 
 .container-footer {
@@ -55,18 +58,22 @@ footer {
 }
 
 small>a {
-    color: white;
-    border-right: 1px solid white;
+    color: $footer-text;
+    border-right: 1px solid $footer-text;
     padding-left: 5px;
     padding-right: 5px;
     font-size: 15px;
 }
 
 a {
-    color: white;
-    border-right: 1px solid white;
+    color: $footer-text;
+    border-right: 1px solid $footer-text;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 15px;
+}
+
+a:hover {
+    color: white;
 }
 </style>
