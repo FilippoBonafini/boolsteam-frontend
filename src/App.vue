@@ -1,7 +1,6 @@
 <script>
-import AppHeader from "./components/AppHeader.vue";
-import AppFooter from "./components/AppFooter.vue";
 import AppMainBot from "./components/AppMainBot.vue";
+import AppMainTop from "./components/AppMainTop.vue";
 import AppCardList from "./components/AppCardList.vue";
 
 // IMPORTIAMO LO STORE DI DATI
@@ -10,9 +9,8 @@ import { store } from "./store";
 export default {
   name: "App",
   components: {
-    AppHeader,
-    AppFooter,
     AppMainBot,
+    AppMainTop,
     AppCardList,
   },
   data() {
@@ -24,8 +22,6 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-  <router-view />
-
+  <AppMainTop />
   <AppMainBot />
 </template>
