@@ -3,6 +3,9 @@ import AppHeader from "./components/AppHeader.vue";
 import AppFooter from "./components/AppFooter.vue";
 import AppMainBot from "./components/AppMainBot.vue";
 import AppCardList from "./components/AppCardList.vue";
+import AppNav from "./components/AppNav.vue";
+import AppGameForYou from "./components/AppGameForYou.vue";
+import AppMainTop from "./components/AppMainTop.vue";
 
 
 export default {
@@ -11,14 +14,15 @@ export default {
     AppHeader,
     AppFooter,
     AppMainBot,
-    AppCardList
+    AppCardList,
+    AppNav,
+    AppGameForYou,
+    AppMainTop
   },
 };
 </script>
 
 <template>
-  <AppHeader />
-  <router-view />
-
+  <AppMainTop />
   <AppMainBot />
 </template>
