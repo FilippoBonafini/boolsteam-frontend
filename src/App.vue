@@ -4,6 +4,8 @@ import AppFooter from "./components/AppFooter.vue";
 import AppMainBot from "./components/AppMainBot.vue";
 import AppCardList from "./components/AppCardList.vue";
 
+// IMPORTIAMO LO STORE DI DATI
+import { store } from "./store";
 
 export default {
   name: "App",
@@ -11,7 +13,12 @@ export default {
     AppHeader,
     AppFooter,
     AppMainBot,
-    AppCardList
+    AppCardList,
+  },
+  data() {
+    return {
+      store,
+    };
   },
 };
 </script>
