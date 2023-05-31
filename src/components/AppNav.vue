@@ -8,12 +8,12 @@ export default {
     <nav>
         <div class="container-nav d-flex justify-content-between align-items-center">
             <ul class="d-flex mt-2">
-                <li><strong>Il tuo negozio</strong></li>
-                <li><strong>Novità e tendenze</strong></li>
-                <li><strong>Categorie</strong></li>
-                <li><strong>Negozio dei punti</strong></li>
-                <li><strong>Notizie</strong></li>
-                <li><strong>laboratori</strong></li>
+                <li><strong><a href="">Il tuo negozio</a></strong></li>
+                <li><strong> <a href="">Novità e tendenze</a> </strong></li>
+                <li><strong> <a href="">Categorie</a> </strong></li>
+                <li><strong> <a href="">Negozio dei punti</a> </strong></li>
+                <li><strong> <a href="">Notizie</a> </strong></li>
+                <li><strong> <a href="">Laboratori</a> </strong></li>
             </ul>
 
             <form>
@@ -41,6 +41,10 @@ ul {
 
 li {
     padding-left: 20px;
+}
+
+strong>a {
+    color: white;
 }
 
 form>button {
