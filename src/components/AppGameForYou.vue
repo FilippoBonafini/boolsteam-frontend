@@ -13,7 +13,5 @@ export default {
 @import '../assets/scss/main.scss';
 @import '../assets/scss/_partial/_variables.scss';
 
-main {
-    background-color: aqua;
-}
+main {}
 </style>
