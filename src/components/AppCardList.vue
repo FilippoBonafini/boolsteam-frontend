@@ -7,7 +7,7 @@ export default {
 <template>
   <main>
     <div class="container container-main-bot">
-      <h3>I GIOCHI:</h3>
+      <h3 class="py-4">I GIOCHI:</h3>
 
       <div class="contaier container-card-list">
         <div class="card-film d-flex justify-content-between align-items-end">
@@ -19,8 +19,7 @@ export default {
               <h3>Titolo</h3>
               <div class="tag">tag</div>
               <div>
-                <small>Data di rilascio</small
-                ><!--aggiungere l'icona delle piattaforme-->
+                <small>Data di rilascio</small><!--aggiungere l'icona delle piattaforme-->
               </div>
             </div>
           </div>
@@ -39,8 +38,7 @@ export default {
               <h3>Titolo</h3>
               <div class="tag">tag</div>
               <div>
-                <small>Data di rilascio</small
-                ><!--aggiungere l'icona delle piattaforme-->
+                <small>Data di rilascio</small><!--aggiungere l'icona delle piattaforme-->
               </div>
             </div>
           </div>
@@ -59,8 +57,7 @@ export default {
               <h3>Titolo</h3>
               <div class="tag">tag</div>
               <div>
-                <small>Data di rilascio</small
-                ><!--aggiungere l'icona delle piattaforme-->
+                <small>Data di rilascio</small><!--aggiungere l'icona delle piattaforme-->
               </div>
             </div>
           </div>
@@ -81,7 +78,7 @@ main {
   color: $card-text;
 }
 
-.container-main-bot > h3 {
+.container-main-bot>h3 {
   color: white;
 }
 
@@ -89,6 +86,10 @@ main {
   background-color: $card-bg;
   padding-top: 5px;
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container-card-list:last-child {
+  padding-bottom: 30px;
 }
 
 .container-img {
