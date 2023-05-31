@@ -1,6 +1,12 @@
 <script>
+import { store } from "../store";
 export default {
   name: "AppGameMain",
+  data() {
+    return {
+      store,
+    };
+  },
 };
 </script>
 
@@ -9,22 +15,21 @@ export default {
     <h2 class="m-0 py-3">GIOCHI</h2>
 
     <div class="container-game d-flex">
-
       <div class="img-price d-flex align-items-end justify-content-end">
-        img
+        <img src="" alt="" />
         <div class="discount">sconto</div>
       </div>
 
-      <div class="card-film d-flex ">
+      <div class="card-film d-flex">
         <div class="info">
-          <h3>Titolo</h3>
+          <h3></h3>
           <div class="tag">tag</div>
           <div>
-            <small>Data di rilascio</small><!--aggiungere l'icona delle piattaforme-->
+            <small>Data di rilascio</small
+            ><!--aggiungere l'icona delle piattaforme-->
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -36,8 +41,6 @@ export default {
 h2 {
   color: white;
 }
-
-
 
 .img-price {
   height: 400px;
