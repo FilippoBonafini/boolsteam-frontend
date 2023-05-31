@@ -20,7 +20,8 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/main.scss";
 @import "../assets/scss/_partial/_variables.scss";
+
 main {
-  background-color: black;
+  background-color: $jumbo-bg;
 }
 </style>

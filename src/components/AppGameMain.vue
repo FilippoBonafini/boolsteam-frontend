@@ -5,10 +5,14 @@ export default {
 </script>
 
 <template>
-  <div class="py-5">Game main</div>
+  <h2>GIOCHI</h2>
 </template>
 
 <style scoped lang="scss">
 @import "../assets/scss/main.scss";
 @import "../assets/scss/_partial/_variables.scss";
+
+h2 {
+  color: white;
+}
 </style>
