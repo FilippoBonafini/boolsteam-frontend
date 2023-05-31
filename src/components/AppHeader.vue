@@ -12,6 +12,7 @@
 
       <div class="redirect">
         <ul class="d-flex">
+          <!--Inserire l'icona al bottone-->
           <li class="button-header"><a href="">Istalla Steam</a></li>
           <li class="login"><a href="">Accedi</a></li>
           <li class="lang"><a href="">Lingua</a> <!--Inserire icona--></li>
