@@ -5,7 +5,9 @@ export default {
 </script>
 
 <template>
-  <h2>GIOCHI</h2>
+  <div>
+    <h2 class="m-0 py-3">GIOCHI</h2>
+  </div>
 </template>
 
 <style scoped lang="scss">
