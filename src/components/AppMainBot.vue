@@ -1,9 +1,9 @@
 <script>
-import AppCardList from "./components/AppCardList.vue";
-import AppFooter from "./components/AppFooter.vue";
+import AppCardList from "./AppCardList.vue";
+import AppFooter from "./AppFooter.vue";
 
 export default {
-    name: "App",
+    name: "AppMainBot",
     components: {
         AppCardList,
         AppFooter,
