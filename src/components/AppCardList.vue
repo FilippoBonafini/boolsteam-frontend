@@ -1,6 +1,12 @@
 <script>
+import { store } from "../store";
 export default {
   name: "AppCardList",
+  data() {
+    return {
+      store,
+    };
+  },
 };
 </script>
 
@@ -10,62 +16,32 @@ export default {
       <h3>I GIOCHI:</h3>
 
       <div class="contaier container-card-list">
-        <div class="card-film d-flex justify-content-between align-items-end">
+        <div
+          v-for="game in store.games"
+          class="card-film d-flex justify-content-between align-items-end"
+        >
           <!--il contaier img poi va tolto-->
           <div class="info-img d-flex">
-            <div class="container-img">img</div>
+            <div class="container-img">
+              <img :src="store.img_prefix + game.image" alt="" />
+            </div>
 
             <div class="info">
-              <h3>Titolo</h3>
-              <div class="tag">tag</div>
+              <h3>{{ game.title }}</h3>
+              <div class="d-flex gap-2">
+                <div class="tag" v-for="tag in game.genres">
+                  {{ tag.name }}
+                </div>
+              </div>
+
               <div>
-                <small>Data di rilascio</small
+                <small>{{ game.release_date }}</small
                 ><!--aggiungere l'icona delle piattaforme-->
               </div>
             </div>
           </div>
 
-          <div class="discount">sconto</div>
-        </div>
-      </div>
-
-      <div class="contaier container-card-list">
-        <div class="card-film d-flex justify-content-between align-items-end">
-          <!--il contaier img poi va tolto-->
-          <div class="info-img d-flex">
-            <div class="container-img">img</div>
-
-            <div class="info">
-              <h3>Titolo</h3>
-              <div class="tag">tag</div>
-              <div>
-                <small>Data di rilascio</small
-                ><!--aggiungere l'icona delle piattaforme-->
-              </div>
-            </div>
-          </div>
-
-          <div class="discount">sconto</div>
-        </div>
-      </div>
-
-      <div class="contaier container-card-list">
-        <div class="card-film d-flex justify-content-between align-items-end">
-          <!--il contaier img poi va tolto-->
-          <div class="info-img d-flex">
-            <div class="container-img">img</div>
-
-            <div class="info">
-              <h3>Titolo</h3>
-              <div class="tag">tag</div>
-              <div>
-                <small>Data di rilascio</small
-                ><!--aggiungere l'icona delle piattaforme-->
-              </div>
-            </div>
-          </div>
-
-          <div class="discount">sconto</div>
+          <div class="discount px-2">{{ game.sconto }}%</div>
         </div>
       </div>
     </div>
@@ -92,10 +68,13 @@ main {
 }
 
 .container-img {
-  width: 200px;
   height: 100px;
-  background-color: orchid;
+  //   background-color: orchid;
   margin: 5px;
+
+  img {
+    max-height: 100%;
+  }
 }
 
 .tag {
