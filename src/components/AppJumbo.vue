@@ -23,5 +23,12 @@ export default {
 
 main {
   background-color: $jumbo-bg;
+  padding-bottom: 40px;
+  .container {
+    background-image: url("../assets/img/gtav-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+  }
 }
 </style>

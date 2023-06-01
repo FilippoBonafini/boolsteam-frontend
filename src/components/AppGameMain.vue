@@ -19,7 +19,18 @@ export default {
     <div class="container-game d-flex justify-content-center">
       <div class="img-price d-flex align-items-end justify-content-end">
         <img :src="store.img_prefix + store.game_selected.image" alt="" />
-        <div class="discount">-{{ store.game_selected.price }}%</div>
+        <div class="box-price">
+          <div class="discount">-{{ store.game_selected.price }}%</div>
+          <div class="discount-price text-center">
+            <div>{{ store.game_selected.price }}$</div>
+            <div class="final-price">
+              {{
+                store.game_selected.price -
+                (store.game_selected.price * store.game_selected.sconto) / 100
+              }}
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="card-film">
@@ -35,6 +46,7 @@ export default {
             <small>{{ store.game_selected.release_date }}</small
             ><!--aggiungere l'icona delle piattaforme-->
           </div>
+          <p>{{ store.game_selected.description }}</p>
         </div>
       </div>
     </div>
@@ -50,15 +62,21 @@ h2 {
 }
 
 .img-price {
-  width: 300px;
-  margin: 20px;
+  width: 600px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
   img {
     width: 100%;
     object-fit: contain;
   }
+}
+.box-price {
+  position: absolute;
+  color: $card-text;
+  display: flex;
+  gap: 2px;
 }
 
 .discount {
@@ -70,11 +88,33 @@ h2 {
   justify-content: center;
   align-items: center;
   padding: 20px 10px;
-  position: absolute;
+}
+.discount-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: $card-bg-discount-price;
+}
+
+.final-price {
+  color: $card-text-discount;
+  font-weight: bolder;
+}
+.final-price::after {
+  content: "$";
 }
 
 .card-film {
   color: $card-text;
+  .info {
+    background-color: rgba(0, 0, 0, 0.739);
+    padding: 10px 20px;
+  }
 }
 .tag {
   background-color: $card-tag-bg;
