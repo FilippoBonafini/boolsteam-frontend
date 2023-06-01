@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store";
+import PhWindowsLogoFill from "./PhWindowsLogoFill.vue";
 export default {
   name: "AppCardList",
   data() {
@@ -7,6 +8,7 @@ export default {
       store,
     };
   },
+  components: { PhWindowsLogoFill },
 };
 </script>
 
@@ -39,12 +41,17 @@ export default {
                 ><!--aggiungere l'icona delle piattaforme-->
               </div>
             </div>
+            <div>
+              <!-- <PhWindowsLogoFill /> -->
+            </div>
           </div>
           <div class="d-flex align-items-center gap-1">
             <div class="discount">-{{ game.sconto }}%</div>
             <div class="discount-price text-center">
               <div>{{ game.price }}$</div>
-              <div class="final-price">122</div>
+              <div class="final-price">
+                {{ game.price - (game.price * game.sconto) / 100 }}
+              </div>
             </div>
           </div>
         </div>

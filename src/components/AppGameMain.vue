@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store";
+import PhWindowsLogoFill from "./PhWindowsLogoFill.vue";
 export default {
   name: "AppGameMain",
   data() {
@@ -7,6 +8,7 @@ export default {
       store,
     };
   },
+  components: { PhWindowsLogoFill },
 };
 </script>
 
@@ -48,10 +50,11 @@ h2 {
 }
 
 .img-price {
-  height: 400px;
   width: 300px;
   margin: 20px;
-  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
     width: 100%;
     object-fit: contain;
