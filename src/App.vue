@@ -23,7 +23,7 @@ export default {
         .get(api)
         .then((response) => {
           this.store.games = response.data.results;
-          this.store.game_selected = response.data.results[1];
+          this.store.game_selected = response.data.results[0];
         })
         .catch((error) => {
           console.log(error);
