@@ -14,18 +14,23 @@ export default {
   <div>
     <h2 class="m-0 py-3">GIOCHI</h2>
 
-    <div class="container-game d-flex">
+    <div class="container-game d-flex justify-content-center">
       <div class="img-price d-flex align-items-end justify-content-end">
-        <img src="" alt="" />
-        <div class="discount">sconto</div>
+        <img :src="store.img_prefix + store.game_selected.image" alt="" />
+        <div class="discount">-{{ store.game_selected.price }}%</div>
       </div>
 
-      <div class="card-film d-flex">
+      <div class="card-film">
         <div class="info">
-          <h3></h3>
-          <div class="tag">tag</div>
+          <h3>{{ store.game_selected.title }}</h3>
+          <div class="d-flex gap-2">
+            <div class="tag" v-for="tag in store.game_selected.genres">
+              {{ tag.name }}
+            </div>
+          </div>
+
           <div>
-            <small>Data di rilascio</small
+            <small>{{ store.game_selected.release_date }}</small
             ><!--aggiungere l'icona delle piattaforme-->
           </div>
         </div>
@@ -44,17 +49,32 @@ h2 {
 
 .img-price {
   height: 400px;
-  background-color: bisque;
-  width: 200px;
+  width: 300px;
   margin: 20px;
+  background-color: grey;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
 }
 
 .discount {
   color: $card-text-discount;
   background-color: $card-bg-bg-discount;
+  font-size: 25px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  position: absolute;
 }
 
 .card-film {
   color: $card-text;
+}
+.tag {
+  background-color: $card-tag-bg;
+  text-align: center;
 }
 </style>

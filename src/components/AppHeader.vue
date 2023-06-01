@@ -1,7 +1,11 @@
 <template>
   <header>
-    <div class="container-header container d-flex justify-content-between align-items-center">
-      <div class="logo-header">logo</div>
+    <div
+      class="container-header container d-flex justify-content-between align-items-center"
+    >
+      <div class="logo-header">
+        <img src="../public/image/logo-steam.png" alt="" />
+      </div>
 
       <nav class="header-nav">
         <a href="">NEGOZIO</a>
@@ -15,7 +19,10 @@
           <!--Inserire l'icona al bottone-->
           <li class="button-header"><a href="">Installa Steam</a></li>
           <li class="login"><a href="">Accedi</a></li>
-          <li class="lang"><a href="">Lingua</a> <!--Inserire icona--></li>
+          <li class="lang">
+            <a href="">Lingua</a>
+            <!--Inserire icona-->
+          </li>
         </ul>
       </div>
     </div>
@@ -29,8 +36,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../assets/scss/main.scss';
-@import '../assets/scss/_partial/_variables.scss';
+@import "../assets/scss/main.scss";
+@import "../assets/scss/_partial/_variables.scss";
 
 header {
   color: $header-text;
@@ -47,20 +54,21 @@ header {
 }
 
 .logo-header {
-  height: 50px;
-  background-color: yellowgreen;
-  width: 150px;
+  height: 70px;
+  img {
+    height: 100%;
+  }
 }
 
-.header-nav>a {
+.header-nav > a {
   padding: 20px;
 }
 
 a {
-  color: $header-text ;
+  color: $header-text;
 }
 
-.header-nav>a:hover {
+.header-nav > a:hover {
   color: white;
 }
 

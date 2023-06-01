@@ -1,13 +1,14 @@
 <template>
-  <h1>questa è la rotta home</h1>
+  <AppJumbo />
+  <AppCardList />
 </template>
 
 <script>
+import AppCardList from "../components/AppCardList.vue";
+import AppJumbo from "../components/AppJumbo.vue";
+
 export default {
   name: "AppHome",
-  props: {},
-  data() {
-    return {};
-  },
+  components: { AppJumbo, AppCardList },
 };
 </script>

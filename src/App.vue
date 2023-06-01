@@ -1,18 +1,16 @@
 <script>
-import AppMainBot from "./components/AppMainBot.vue";
-import AppMainTop from "./components/AppMainTop.vue";
-import AppCardList from "./components/AppCardList.vue";
-
 // IMPORTIAMO LO STORE DI DATI
 import { store } from "./store";
 import axios from "axios";
 
+import AppHeader from "./components/AppHeader.vue";
+import AppFooter from "./components/AppFooter.vue";
+
 export default {
   name: "App",
   components: {
-    AppMainBot,
-    AppMainTop,
-    AppCardList,
+    AppHeader,
+    AppFooter,
   },
   data() {
     return {
@@ -25,6 +23,7 @@ export default {
         .get(api)
         .then((response) => {
           this.store.games = response.data.results;
+          this.store.game_selected = response.data.results[1];
         })
         .catch((error) => {
           console.log(error);
@@ -38,6 +37,7 @@ export default {
 </script>
 
 <template>
-  <AppMainTop />
-  <AppMainBot />
+  <AppHeader />
+  <router-view />
+  <AppFooter />
 </template>
